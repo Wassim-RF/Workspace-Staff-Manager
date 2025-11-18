@@ -1,1 +1,0 @@
-/* Les event comme (click ...) */

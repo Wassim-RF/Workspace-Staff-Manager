@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Principale color */
+:root {
+    --background-primary: #F6F6F8;
+    --background-layout: #ffffff;
+    --button: #155DFC;
+    --botton-hover: #1453dc;
+    --more-color: #d9d9d9;
+    --more-text-color: #c0c0c0;
+    --text-color: #000000;
+    --primary-font: "Montserrat", sans-serif;
+}
+
+/* Roles color */
+:root {
+    --manager-bg-color: #D0FAE5;
+    --manager-second-color: #007A55;
+
+    --receptionniste-bg-color: #DBEAFE;
+    --receptionniste-second-color: #1447E6;
+
+    --security-bg-color: #FFE2E2;
+    --security-second-color: #C10047;
+
+    --it-bg-color: #F3E8FF;
+    --it-second-color: #8200DB;
+
+    ---nettoyage-bg-color: #E6FFFE;
+    --nettoyage-second-color: #00ADB5;
+}
+
+/* Salle color */
+:root {
+    --salle-vide-bg:#FBF8F8;
+    --salle-vide-second: #FFC9C9;
+    --salle-plein-bg: #ffffff;
+    --salle-plein-bg: #C3EDDF;
+    --salle-plein-range: #10B981;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--background-primary);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Les layouts */
+.unassigned_Staff--section , .stats_Activity--section {
+    width: 15%;
+    height: 100%;
+    background-color: var(--background-layout);
+}
+
+.floor_Plan--section {
+    width: 70%;
+}
+
+/* Unassigned Staff */
+.unassigned_Staff--section {
+    border-right: 0.2px solid var(--more-text-color);
+    box-shadow: 0px 2px 5px var(--more-text-color);
+}
+
+.header_search--partie {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5%;
+    padding-top: 20px;
+}
+
+.header_search--partie>p {
+    font-weight: 500;
+}
+
+.search_search--partie , .filter_search--partie {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_search--partie>div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+    background-color: rgba(217, 217, 217, 0.2);
+    padding: 5px;
+    border-radius: 7px;
+    width: 90%;
+}
+
+.search_search--partie>div>input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.filter_search--partie>div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+    width: 90%;
+}
+
+.filter_search--partie>div>select {
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: rgba(217, 217, 217, 0.4);
+    border-radius: 7px;
+    outline: none;
+}
+
+.staff_UNST--partie {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    gap: 10px;
+}
+
+.emploiyee_card {
+    border: 1px solid #c0c0c0;
+    padding: 5px;
+    width: 85%;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px var(--more-text-color);
+    cursor:grab;
+} 
+
+.emploiyee_card>svg {
+    visibility: hidden;
+}
+
+.emploiyee_card:hover {
+    transform: scale(1.02);
+}
+
+.emploiyee_card:hover >svg {
+    visibility: visible;
+}
+
+.emploiyee_card>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.emploiyee_card>div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.emploiyee_card>div>div {
+    display: flex;
+    align-items: center;
+}
+
+.emploiyee_card>div>div>p {
+    font-size: smaller;
+}
+
+.emploiyee_card>div>p {
+    width: 100%;
+    text-align: center;
+    font-size: small;
+    border-radius: 10px;
+}
+
+.manager_role {
+    background-color: var(--manager-bg-color);
+    border: 0.2px solid var(--manager-second-color);
+    color: var(--manager-second-color);
+}
+
+.receptionniste_role {
+    background-color: var(--receptionniste-bg-color);
+    border: 0.2px solid var(--receptionniste-second-color);
+    color: var(--receptionniste-second-color);
+}
+
+.security_role {
+    background-color: var(--security-bg-color);
+    border: 0.2px solid var(--security-second-color);
+    color: var(--security-second-color);
+}
+
+.it_role {
+    background-color: var(--it-bg-color);
+    border: 0.2px solid var(--it-second-color);
+    color: var(--it-second-color);
+}
+
+.nettoyage_role {
+    background-color: var(--nettoyage-bg-color);
+    border: 0.2px solid var(--nettoyage-second-color);
+    color: var(--nettoyage-second-color);
+}
+
+.add_Staff_Button--partie {
+    width: 100%;
+    height: 9%;
+    border-top: 0.2px solid var(--more-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_Staff_Button--partie>button {
+    width: 85%;
+    height: 50%;
+    border: none;
+    color: white;
+    background-color: var(--button);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.add_Staff_Button--partie>button:hover {
+    background-color: var(--botton-hover);
+}
+
+/* Add emploiyee modal */
+.add_Staff--Modal--container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add_Staff--Modal {
+    width: 35%;
+    height: 83%;
+    position: absolute;
+    z-index: 999;
+    background-color: var(--background-layout);
+    padding: 1%;
+    border-radius: 2%;
+}
+
+.header_add_staff--Modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_add_staff--Modal>p {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.header_add_staff--Modal>button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.add_Staff--Modal>p {
+    font-size: small;
+    color: var(--more-text-color);
+    margin-top: 1%;
+}
+
+.add_Staff--Modal>form {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.add_Staff--Modal>form>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.partie_form--addStaffModal {
+    display: flex;
+    gap: 5%;
+}
+
+.partie_form--addStaffModal>div {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 10px;
+}
+
+.partie_form--addStaffModal>div>input , .partie_form--addStaffModal>div>select {
+    width: 100%;
+    height: 30px;
+    padding-left: 5%;
+    border: none;
+    background-color: rgba(217, 217, 217, 0.4);
+    border-radius: 7px;
+    outline: none;
+    padding-left: 5%;
+}
+
+.partie_form--addStaffModal>div>select {
+    width: 105%;
+}
+
+.picture_Form--addStaffModal {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    gap: 20px;
+}
+
+.picture_Form--addStaffModal>div:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(217, 217, 217, 0.4);
+    border-radius: 7px;
+    border: 2px dashed var(--more-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture_Form--addStaffModal>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.picture_Form--addStaffModal>div:nth-child(2)>input {
+    width: 170%;
+    height: 30px;
+    padding-left: 5%;
+    border: none;
+    background-color: rgba(217, 217, 217, 0.4);
+    border-radius: 7px;
+    outline: none;
+    padding-left: 5%;
+}
+
+.picture_Form--addStaffModal>div:nth-child(2)>p {
+    font-size: small;
+    color: var(--more-text-color);
+}
+
+.experience_Form--addStaffModal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience_Form--addStaffModal>div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience_Form--addStaffModal>div:nth-child(1)>button {
+    background: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 1%;
+    border-radius: 10px;
+    border: 0.5px solid var(--more-text-color);
+    cursor: pointer;
+}
+
+.experience_Form--addStaffModal>div:nth-child(1)>button:hover {
+    background-color: var(--more-color);
+}
+
+.experience_Form--addStaffModal>div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience_Form--addStaffModal>div:nth-child(2)>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    gap: 3%;
+    background-color: rgba(217, 217, 217, 0.4);
+    border-radius: 20px;
+}
+
+.experience_Form--addStaffModal>div:nth-child(2)>div>input {
+    background-color: var(--more-color);
+    border: none;
+    outline: none;
+    height: 70%;
+    width: 42%;
+    border-radius: 7px;
+    padding-left: 12px;
+}
+
+.add_Staff--Modal>form input:focus {
+    border: 0.1px solid #8c8c8c;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
+}
+
+.buttons_Form--addStaffModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons_Form--addStaffModal>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 85%;
+    border-top: 0.5px solid var(--more-text-color);
+    padding-top: 3%;
+}
+
+.buttons_Form--addStaffModal>div>button {
+    width: 45%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+}
+
+.buttons_Form--addStaffModal>div>button:nth-child(1) {
+    background: none;
+    border: 1px solid #8c8c8c;
+}
+
+.buttons_Form--addStaffModal>div>button:nth-child(1):hover {
+    background-color: var(--more-color);
+}
+
+.buttons_Form--addStaffModal>div>button:nth-child(2) {
+    background-color: var(--button);
+    color: white;
+}
+
+.buttons_Form--addStaffModal>div>button:nth-child(2):hover {
+    background-color: var(--botton-hover);
+}
+
+
+/* Floor Plan */
+.floor_Plan--section {
+    padding: 5%;
+    padding-bottom: 2%;
+}
+
+.floor_Plan--section>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 19%;
+}
+
+.floor_Plan--section>div:nth-child(2) {
+    height: 81%;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    gap: 10px;
+}
+
+.floor_Plan--section>div:nth-child(2)>div {
+    background-color: #FBF8F8;
+    border: 2px solid #FFC9C9;
+    border-radius: 20px;
+    padding: 3%;
+    padding-top: 5%;
+}
+
+.room_floor_plan--header>div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.room_floor_plan--header>div:nth-child(1)>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.emploiyee_number--inRoom {
+    color: var(--more-text-color);
+    font-size: small;
+}
+
+.room_logo {
+    border-radius: 8px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room_Name {
+    font-weight: 600;
+}
+
+.add_Staff--InRoom--Button {
+    background: none;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.add_Staff--InRoom--Button:hover {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.conference_room--Logo {
+    background-color: #E7F3EF;
+}
+
+.reception_room--Logo {
+    background-color: #FAF1E5;
+}
+
+.serveur_room--Logo {
+    background-color: #EBEFF8;
+}
+
+.securite_room--Logo {
+    background-color: #FAEAEA;
+}
+
+.personal_room--Logo {
+    background-color: #F1ECF8;
+}
+
+.archives_room--Logo {
+    background-color: #EFEDEF;
+}
+
+.room_floor_plan--header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.room_floor_plan--header>div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emploiyeeNumber_inRoom {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 6px;
+    background: var(--more-color);
+    border-radius: 7px;
+    outline: none;
+}
+
+.emploiyeeNumber_inRoom::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+}
+
+.emploiyeeNumber_inRoom::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    border: none;
+    background: transparent;
+}
+
+.emploiyee_inRoom--plan_floor {
+    height: 79%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.emploiyee_inRoom--plan_floor>p {
+    font-size: small;
+    color: var(--more-text-color);
+}

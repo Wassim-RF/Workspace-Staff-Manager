@@ -1,1 +1,3 @@
-/* Le principale file  */
+import {setupEvent} from './event.js';
+
+setupEvent();
