@@ -36,15 +36,6 @@
     --nettoyage-second-color: #00ADB5;
 }
 
-/* Salle color */
-:root {
-    --salle-vide-bg:#FBF8F8;
-    --salle-vide-second: #FFC9C9;
-    --salle-plein-bg: #ffffff;
-    --salle-plein-bg: #C3EDDF;
-    --salle-plein-range: #10B981;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -71,6 +62,14 @@ body {
 .unassigned_Staff--section {
     border-right: 0.2px solid var(--more-text-color);
     box-shadow: 0px 2px 5px var(--more-text-color);
+}
+
+.search_UNST--partie {
+    height: 23%;
+    border-bottom: 0.2px solid var(--more-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .header_search--partie {

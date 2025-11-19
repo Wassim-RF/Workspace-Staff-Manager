@@ -1,4 +1,13 @@
 import {hideModalAddStaff} from './modal.js';
+import {employees} from '../data/employees.js';
+
+function randomNumericId(length = 3) {
+    let id = "";
+    for (let i = 0; i < length; i++) {
+        id += Math.floor(Math.random() * 10); // 0–9
+    }
+    return id;
+}
 
 export function createEmploiyeeCard() {
     const emploiyeeName = document.getElementById("emploiyee_Name");
@@ -57,6 +66,16 @@ export function createEmploiyeeCard() {
             </div>
         </div>
     `;
+
+    employees.push({
+        "id": randomNumericId(),
+        "name": emploiyeeName.value,
+        "email": emploiyeeEmail.value,
+        "telephone": emploiyePhone.value,
+        "role": emploiyeeRole.value,
+        "imageURL": emploiyeeProfileURL.value,
+    });
+    console.log(employees);
     emploiyeeName.value = "";
     emploiyeeRole.value = "";
     emploiyePhone.value = "";
