@@ -1,4 +1,5 @@
 import {hideModalAddStaff} from './modal.js';
+import {createEmploiyee} from '../logic/manageEmploiyee.js'
 import {employees} from '../data/employees.js';
 
 function randomNumericId(length = 3) {
@@ -21,6 +22,13 @@ export function createEmploiyeeCard() {
         return;
     }
 
+    if (emploiyeeRole.value.trim() === "Select Role") {
+        alert("Choisir un role pour l'emploiyee");
+        return;
+    }
+
+    if (!createEmploiyee(employees , randomNumericId() , emploiyeeName.value , emploiyeeEmail.value , emploiyePhone.value , emploiyeeRole.value , emploiyeeProfileURL.value)) return;
+
     let avatarHTML = "";
     const nameParts = emploiyeeName.value.trim().split(" ");
     const firstLetter = nameParts[0]?.charAt(0).toUpperCase() || "?";
@@ -39,16 +47,15 @@ export function createEmploiyeeCard() {
         avatarHTML = `<img src="${emploiyeeProfileURL.value}" class="avatar_img">`;
     }
 
-    if (emploiyeeRole.value.trim() === "Select Role") {
-        alert("Choisir un role pour l'emploiyee");
-        return;
-    }
-
     let roleClasseEmploiyee;
     switch (emploiyeeRole.value) {
         case "IT" :
             roleClasseEmploiyee = "it_role";
             break;
+        case "Manager" :
+            roleClasseEmploiyee = "manager_role";
+            break;
+        
         default :
             roleClasseEmploiyee = "";
     }
@@ -66,18 +73,8 @@ export function createEmploiyeeCard() {
             </div>
         </div>
     `;
-
-    employees.push({
-        "id": randomNumericId(),
-        "name": emploiyeeName.value,
-        "email": emploiyeeEmail.value,
-        "telephone": emploiyePhone.value,
-        "role": emploiyeeRole.value,
-        "imageURL": emploiyeeProfileURL.value,
-    });
-    console.log(employees);
     emploiyeeName.value = "";
-    emploiyeeRole.value = "";
+    emploiyeeRole.value = "Select Role";
     emploiyePhone.value = "";
     emploiyeeProfileURL.value = "";
     emploiyeeEmail.value = "";

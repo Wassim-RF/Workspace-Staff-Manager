@@ -1,6 +1,6 @@
 export const roleAcces = {
-    "conference": ["all"],
-    "reception": ["manager" , "receptionniste" , "nettoyage"],
+    conference : {allowed : ["all"] , max : 10},
+    reception: ["manager" , "receptionniste" , "nettoyage"],
     "serveur": ["it" , "manager" , "nettoyage"],
     "securite": ["manager" , "security" , "nettoyage"],
     "personal": ["all"],
