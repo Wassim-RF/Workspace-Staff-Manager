@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/style.css">
-    <!-- <link rel="stylesheet" href="Style/main.css"> -->
     <link rel="stylesheet" href="Style/modal.css">
     <link rel="stylesheet" href="Style/respo.css">
     <title>Workspace Staff Manager</title>
@@ -28,7 +27,12 @@
                 <div>
                     <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#c0c0c0" d="M32 64C19.1 64 7.4 71.8 2.4 83.8s-2.2 25.7 7 34.8L192 301.3V416c0 8.5 3.4 16.6 9.4 22.6l64 64c9.2 9.2 22.9 11.9 34.9 6.9S320 492.9 320 480V301.3l182.6-182.6c9.2-9.2 11.9-22.9 6.9-34.9S492.9 64 480 64z"/></svg>
                     <select name="roles_filter" id="roles_filter">
-                        <option value="">All Roles</option>
+                        <option>All Roles</option>
+                        <option>IT</option>
+                        <option>Manager</option>
+                        <option>Receptionniste</option>
+                        <option>Nettoyage</option>
+                        <option>Security</option>
                     </select>
                 </div>
             </div>
@@ -88,13 +92,13 @@
                             </div>
                             <div>
                                 <p class="room_Name">Réception</p>
-                                <p class="emploiyee_number--inRoom">0/10 emploiyees</p>
+                                <p class="emploiyee_number--inRoom">0/2 emploiyees</p>
                             </div>
                         </div>
                         <button class="add_Staff--InRoom--Button">+</button>
                     </div>
                     <div>
-                        <input type="range" min="0" max="10" class="emploiyeeNumber_inRoom">
+                        <input type="range" min="0" max="2" class="emploiyeeNumber_inRoom">
                     </div>
                 </div>
                 <div class="emploiyee_inRoom--plan_floor">
@@ -110,14 +114,14 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"><g fill="none"><rect width="18.5" height="7.5" x="2.75" y="2.751" stroke="#3B82F6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" rx="2"/><circle cx="6.25" cy="6.501" r="1.25" fill="#3B82F6"/><circle cx="10.25" cy="6.501" r="1.25" fill="#3B82F6"/><rect width="18.5" height="7.5" x="2.75" y="13.749" stroke="#3B82F6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" rx="2"/><circle cx="6.25" cy="17.499" r="1.25" fill="#3B82F6"/><circle cx="10.25" cy="17.499" r="1.25" fill="#3B82F6"/></g></svg>
                             </div>
                             <div>
-                                <p class="room_Name">Réception</p>
-                                <p class="emploiyee_number--inRoom">0/10 emploiyees</p>
+                                <p class="room_Name">Serveur</p>
+                                <p class="emploiyee_number--inRoom">0/3 emploiyees</p>
                             </div>
                         </div>
                         <button class="add_Staff--InRoom--Button">+</button>
                     </div>
                     <div>
-                        <input type="range" min="0" max="10" class="emploiyeeNumber_inRoom">
+                        <input type="range" min="0" max="3" class="emploiyeeNumber_inRoom">
                     </div>
                 </div>
                 <div class="emploiyee_inRoom--plan_floor">
@@ -133,14 +137,14 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#EF4444" stroke-dasharray="64" stroke-dashoffset="64" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l-9 3.5v6.5c0 3.5 3.5 9 8 10c4.5 -1 8 -6.5 8 -10v-6.5l-8 -3.5Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path></svg>                            
                             </div>
                             <div>
-                                <p class="room_Name">Réception</p>
-                                <p class="emploiyee_number--inRoom">0/10 emploiyees</p>
+                                <p class="room_Name">Securite</p>
+                                <p class="emploiyee_number--inRoom">0/2 emploiyees</p>
                             </div>
                         </div>
                         <button class="add_Staff--InRoom--Button">+</button>
                     </div>
                     <div>
-                        <input type="range" min="0" max="10" class="emploiyeeNumber_inRoom">
+                        <input type="range" min="0" max="2" class="emploiyeeNumber_inRoom">
                     </div>
                 </div>
                 <div class="emploiyee_inRoom--plan_floor">
@@ -156,14 +160,14 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#8B5CF6"><g fill="#8B5CF6"><path d="M6 2.5a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Z"/><path fill-rule="evenodd" d="M13 21.5a6.002 6.002 0 0 0 5.917-5H19a4 4 0 0 0 0-8v-1H1v8a6 6 0 0 0 6 6h6ZM3 9.5v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-6H3Zm18 3a2 2 0 0 1-2 2v-4a2 2 0 0 1 2 2Z" clip-rule="evenodd"/><path d="M9 3.5a1 1 0 1 1 2 0v2a1 1 0 1 1-2 0v-2Zm5-1a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1Z"/></g></svg>
                             </div>
                             <div>
-                                <p class="room_Name">Réception</p>
-                                <p class="emploiyee_number--inRoom">0/10 emploiyees</p>
+                                <p class="room_Name">Personnal</p>
+                                <p class="emploiyee_number--inRoom">0/8 emploiyees</p>
                             </div>
                         </div>
                         <button class="add_Staff--InRoom--Button">+</button>
                     </div>
                     <div>
-                        <input type="range" min="0" max="10" class="emploiyeeNumber_inRoom">
+                        <input type="range" min="0" max="8" class="emploiyeeNumber_inRoom">
                     </div>
                 </div>
                 <div class="emploiyee_inRoom--plan_floor">
@@ -179,14 +183,14 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="#6B7280" d="M15.5 2.75a1.25 1.25 0 0 0-1.25-1.25H1.75A1.25 1.25 0 0 0 .5 2.75v2.5h1.25v8A1.25 1.25 0 0 0 3 14.5h10a1.25 1.25 0 0 0 1.25-1.25v-8h1.25zM13 5.25v8H3v-8h10zM14.25 4H1.75V2.75h12.5z"/><path fill="#6B7280" d="M7.38 8.38h1.24a.63.63 0 0 0 0-1.26H7.38a.63.63 0 0 0 0 1.26z"/></svg>
                             </div>
                             <div>
-                                <p class="room_Name">Réception</p>
-                                <p class="emploiyee_number--inRoom">0/10 emploiyees</p>
+                                <p class="room_Name">Archives</p>
+                                <p class="emploiyee_number--inRoom">0/2 emploiyees</p>
                             </div>
                         </div>
                         <button class="add_Staff--InRoom--Button">+</button>
                     </div>
                     <div>
-                        <input type="range" min="0" max="10" class="emploiyeeNumber_inRoom">
+                        <input type="range" min="0" max="2" class="emploiyeeNumber_inRoom">
                     </div>
                 </div>
                 <div class="emploiyee_inRoom--plan_floor">
@@ -197,7 +201,7 @@
     </section>
     <!-- <section class="stats_Activity--section"></section> -->
 
-    <div class="add_Staff--Modal--container" id="add_Staff--Modal">
+    <div class="Modal_container" id="add_Staff--Modal">
         <div class="add_Staff--Modal">
             <div class="header_add_staff--Modal">
                 <p>Ajoute nouvelle employee</p>
@@ -235,8 +239,8 @@
                     </div>
                 </div>
                 <div class="picture_Form--addStaffModal">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><path fill="#c0c0c0" fill-rule="evenodd" d="M11.5 3h-7A1.5 1.5 0 0 0 3 4.5v5.027l.962-.7a1.75 1.75 0 0 1 2.079.016l.928.696l2.368-2.03a1.75 1.75 0 0 1 2.325.043L13 8.787V4.5A1.5 1.5 0 0 0 11.5 3m3 7.498V4.5a3 3 0 0 0-3-3h-7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h7a3 3 0 0 0 3-3zm-1.5.33l-2.355-2.174a.25.25 0 0 0-.332-.006L7.488 11.07l-.457.392l-.481-.361l-1.41-1.057a.25.25 0 0 0-.296-.002L3 11.381v.119A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5zM7.5 6a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0" clip-rule="evenodd"/></svg>
+                    <div class="profilePictireDiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16" id="picture_svg--profileURL"><path fill="#c0c0c0" fill-rule="evenodd" d="M11.5 3h-7A1.5 1.5 0 0 0 3 4.5v5.027l.962-.7a1.75 1.75 0 0 1 2.079.016l.928.696l2.368-2.03a1.75 1.75 0 0 1 2.325.043L13 8.787V4.5A1.5 1.5 0 0 0 11.5 3m3 7.498V4.5a3 3 0 0 0-3-3h-7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h7a3 3 0 0 0 3-3zm-1.5.33l-2.355-2.174a.25.25 0 0 0-.332-.006L7.488 11.07l-.457.392l-.481-.361l-1.41-1.057a.25.25 0 0 0-.296-.002L3 11.381v.119A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5zM7.5 6a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0" clip-rule="evenodd"/></svg>
                     </div>
                     <div>
                         <label for="emploiyee_profile">Photo URL :</label>
@@ -247,12 +251,15 @@
                 <div class="experience_Form--addStaffModal">
                     <div>
                         <Label>Experience :</Label>
-                        <button>+  Add Experience</button>
+                        <button type="button" id="add_experience--Button">+  Add Experience</button>
                     </div>
-                    <div>
+                    <div id="experience_inputes--container">
                         <div>
-                            <input type="text" placeholder="Titre du travaille">
-                            <input type="text" placeholder="2020-present">
+                            <input type="text" placeholder="Titre du travaille" id="job_Title">
+                            <div>
+                                <input type="text" placeholder="2020" id="start_travaille">
+                                <input type="text" placeholder="present" id="end_travaile">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,6 +270,67 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <div class="Modal_container">
+        <div class="emploiyee_detail--Modal">
+            <div class="emploiyee_detail--Modal--header">
+                <div>
+                    <p>Emploiyee details</p>
+                    <button>✕</button>
+                </div>
+                <div>
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/cristiano-ronaldo-of-portugal-during-the-uefa-nations-news-photo-1748359673.pjpeg?crop=0.610xw:0.917xh;0.317xw,0.0829xh&resize=640:*" alt="">
+                    <p>Test</p>
+                    <p class="it_role">IT</p>
+                </div>
+            </div>
+            <div class="emploiyee_detail--Modal--body">
+                <div>
+                    <p>Contact Information</p>
+                    <div class="contact_info--div">
+                        <div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 16 16"><path fill="#c0c0c0" fill-rule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"/></svg>
+                            </div>
+                            <div>
+                                <p>Email</p>
+                                <p>test@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact_info--div">
+                        <div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 16 16"><path fill="#c0c0c0" fill-rule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"/></svg>
+                            </div>
+                            <div>
+                                <p>Email</p>
+                                <p>test@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Experience</p>
+                    <div>
+                        <div class="Experience_info">
+                            <div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 512 512"><path fill="#007A55" fill-rule="evenodd" d="m320 64l21.334 21.333l-.001 42.667h128v298.667H42.668V128h128V85.333L192 64zM85.333 284.935V384h341.334v-99.065c-42.625 12.196-85.298 19.824-128 22.874v33.524h-85.333V307.81c-42.702-3.05-85.375-10.678-128-22.874m341.334-114.268H85.334v69.766c56.972 17.5 113.84 26.234 170.666 26.234c56.827 0 113.695-8.734 170.668-26.234zm-128-64h-85.333V128h85.333z"/></svg>                                </div>
+                                <div>
+                                    <p>Email</p>
+                                    <p>test@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close_emoloyee_detaille--Button2">
+                <button>Close</button>
+            </div>
         </div>
     </div>
 

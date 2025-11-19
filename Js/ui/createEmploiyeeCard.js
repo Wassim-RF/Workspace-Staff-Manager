@@ -1,14 +1,8 @@
 import {hideModalAddStaff} from './modal.js';
 import {createEmploiyee} from '../logic/manageEmploiyee.js'
 import {employees} from '../data/employees.js';
-
-function randomNumericId(length = 3) {
-    let id = "";
-    for (let i = 0; i < length; i++) {
-        id += Math.floor(Math.random() * 10); // 0–9
-    }
-    return id;
-}
+import {randomNumericId} from '../logic/simpleLogic.js';
+import {createAvatar} from '../logic/simpleLogic.js';
 
 export function createEmploiyeeCard() {
     const emploiyeeName = document.getElementById("emploiyee_Name");
@@ -17,6 +11,8 @@ export function createEmploiyeeCard() {
     const emploiyePhone = document.getElementById("emploiyee_phone");
     const emploiyeeProfileURL = document.getElementById("emploiyee_profile--URL");
     const staffUNSTpartie = document.getElementById("staff_UNST--partie");
+    const emploiyeeId = randomNumericId();
+    let experience = [];
     if (emploiyeeName.value.trim() === "" || emploiyeeRole.value.trim() === "" || emploiyePhone.value.trim() === "") {
         alert("Plein la form");
         return;
@@ -27,25 +23,9 @@ export function createEmploiyeeCard() {
         return;
     }
 
-    if (!createEmploiyee(employees , randomNumericId() , emploiyeeName.value , emploiyeeEmail.value , emploiyePhone.value , emploiyeeRole.value , emploiyeeProfileURL.value)) return;
+    if (!createEmploiyee(employees , emploiyeeId , emploiyeeName.value , emploiyeeEmail.value , emploiyePhone.value , emploiyeeRole.value , emploiyeeProfileURL.value , experience)) return;
 
-    let avatarHTML = "";
-    const nameParts = emploiyeeName.value.trim().split(" ");
-    const firstLetter = nameParts[0]?.charAt(0).toUpperCase() || "?";
-    const secondLetter = nameParts[1]?.charAt(0).toUpperCase() || "";
-    const initials = firstLetter + secondLetter;
-    const colors = ["#FF6B6B", "#4ECDC4", "#5567FF", "#FFA726", "#AB47BC", "#26A69A"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-    if (!emploiyeeProfileURL.value.trim()) {
-        avatarHTML = `
-            <div class="avatar_auto" style="width: 45px; height: 45px; border-radius: 50%; background: ${randomColor}; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 18px;">
-                ${initials}
-            </div>
-        `;
-    } else {
-        avatarHTML = `<img src="${emploiyeeProfileURL.value}" class="avatar_img">`;
-    }
+    let avatarHTML = createAvatar(emploiyeeName.value, emploiyeeProfileURL.value, 45);
 
     let roleClasseEmploiyee;
     switch (emploiyeeRole.value) {
@@ -55,13 +35,21 @@ export function createEmploiyeeCard() {
         case "Manager" :
             roleClasseEmploiyee = "manager_role";
             break;
-        
+        case "Receptionniste" :
+            roleClasseEmploiyee = "receptionniste_role";
+            break;
+        case "Nettoyage" :
+            roleClasseEmploiyee = "nettoyage_role";
+            break;
+        case "Security" :
+            roleClasseEmploiyee = "security_role" ;
+            break;
         default :
             roleClasseEmploiyee = "";
     }
 
     staffUNSTpartie.innerHTML += `
-        <div class="emploiyee_card">
+        <div class="emploiyee_card" id="${emploiyeeId}">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#c0c0c0" d="M9 20q-.825 0-1.413-.588T7 18q0-.825.588-1.413T9 16q.825 0 1.413.588T11 18q0 .825-.588 1.413T9 20Zm6 0q-.825 0-1.413-.588T13 18q0-.825.588-1.413T15 16q.825 0 1.413.588T17 18q0 .825-.588 1.413T15 20Zm-6-6q-.825 0-1.413-.588T7 12q0-.825.588-1.413T9 10q.825 0 1.413.588T11 12q0 .825-.588 1.413T9 14Zm6 0q-.825 0-1.413-.588T13 12q0-.825.588-1.413T15 10q.825 0 1.413.588T17 12q0 .825-.588 1.413T15 14ZM9 8q-.825 0-1.413-.588T7 6q0-.825.588-1.413T9 4q.825 0 1.413.588T11 6q0 .825-.588 1.413T9 8Zm6 0q-.825 0-1.413-.588T13 6q0-.825.588-1.413T15 4q.825 0 1.413.588T17 6q0 .825-.588 1.413T15 8Z"/></svg>
             ${avatarHTML}
             <div>
@@ -80,4 +68,19 @@ export function createEmploiyeeCard() {
     emploiyeeEmail.value = "";
 
     hideModalAddStaff();
+}
+
+export function addExperience() {
+    const experienceInputesContainers = document.getElementById("experience_inputes--container");
+    const newExperienceDiv = document.createElement("div");
+
+    newExperienceDiv.innerHTML += `
+        <input type="text" placeholder="Titre du travaille">
+        <div>
+            <input type="text" placeholder="2020">
+            <input type="text" placeholder="present">
+        </div>
+    `;
+
+    experienceInputesContainers.appendChild(newExperienceDiv);
 }
