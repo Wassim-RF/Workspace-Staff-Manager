@@ -603,7 +603,7 @@ body {
     background: transparent;
 }
 
-.emploiyee_inRoom--plan_floor {
+.emploiyee_inRoom--plan_floor , .emploiyee_inRoom--plan_floor--without {
     height: 79%;
     display: flex;
     align-items: center;
