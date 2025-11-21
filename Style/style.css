@@ -106,6 +106,7 @@ body {
     border: none;
     outline: none;
     background: none;
+    width: 100%;
 }
 
 .filter_search--partie>div {
@@ -185,6 +186,27 @@ body {
     border-radius: 10px;
 }
 
+.emploiyee_card>div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emploiyee_card button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.emploiyee_card button:hover {
+    background-color: var(--more-color);
+}
+
+.emploiyee_card:hover button {
+    display: block;
+}
+
 .manager_role {
     background-color: var(--manager-bg-color);
     border: 0.2px solid var(--manager-second-color);
@@ -239,235 +261,6 @@ body {
     background-color: var(--botton-hover);
 }
 
-/* Add emploiyee modal */
-.add_Staff--Modal--container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.add_Staff--Modal {
-    width: 35%;
-    height: 83%;
-    position: absolute;
-    z-index: 999;
-    background-color: var(--background-layout);
-    padding: 1%;
-    border-radius: 2%;
-}
-
-.header_add_staff--Modal {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header_add_staff--Modal>p {
-    font-size: larger;
-    font-weight: 600;
-}
-
-.header_add_staff--Modal>button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.add_Staff--Modal>p {
-    font-size: small;
-    color: var(--more-text-color);
-    margin-top: 1%;
-}
-
-.add_Staff--Modal>form {
-    margin-top: 7%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.add_Staff--Modal>form>div:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.partie_form--addStaffModal {
-    display: flex;
-    gap: 5%;
-}
-
-.partie_form--addStaffModal>div {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    gap: 10px;
-}
-
-.partie_form--addStaffModal>div>input , .partie_form--addStaffModal>div>select {
-    width: 100%;
-    height: 30px;
-    padding-left: 5%;
-    border: none;
-    background-color: rgba(217, 217, 217, 0.4);
-    border-radius: 7px;
-    outline: none;
-    padding-left: 5%;
-}
-
-.partie_form--addStaffModal>div>select {
-    width: 105%;
-}
-
-.picture_Form--addStaffModal {
-    display: flex;
-    align-items: center;
-    margin-left: 5%;
-    gap: 20px;
-}
-
-.picture_Form--addStaffModal>div:nth-child(1) {
-    width: 100px;
-    height: 100px;
-    background-color: rgba(217, 217, 217, 0.4);
-    border-radius: 7px;
-    border: 2px dashed var(--more-text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.picture_Form--addStaffModal>div:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.picture_Form--addStaffModal>div:nth-child(2)>input {
-    width: 170%;
-    height: 30px;
-    padding-left: 5%;
-    border: none;
-    background-color: rgba(217, 217, 217, 0.4);
-    border-radius: 7px;
-    outline: none;
-    padding-left: 5%;
-}
-
-.picture_Form--addStaffModal>div:nth-child(2)>p {
-    font-size: small;
-    color: var(--more-text-color);
-}
-
-.experience_Form--addStaffModal {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.experience_Form--addStaffModal>div:nth-child(1) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.experience_Form--addStaffModal>div:nth-child(1)>button {
-    background: none;
-    font-size: 17px;
-    font-weight: 500;
-    padding: 1%;
-    border-radius: 10px;
-    border: 0.5px solid var(--more-text-color);
-    cursor: pointer;
-}
-
-.experience_Form--addStaffModal>div:nth-child(1)>button:hover {
-    background-color: var(--more-color);
-}
-
-.experience_Form--addStaffModal>div:nth-child(2) {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.experience_Form--addStaffModal>div:nth-child(2)>div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 50px;
-    gap: 3%;
-    background-color: rgba(217, 217, 217, 0.4);
-    border-radius: 20px;
-}
-
-.experience_Form--addStaffModal>div:nth-child(2)>div>input {
-    background-color: var(--more-color);
-    border: none;
-    outline: none;
-    height: 70%;
-    width: 42%;
-    border-radius: 7px;
-    padding-left: 12px;
-}
-
-.add_Staff--Modal>form input:focus {
-    border: 0.1px solid #8c8c8c;
-    box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
-}
-
-.buttons_Form--addStaffModal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.buttons_Form--addStaffModal>div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 85%;
-    border-top: 0.5px solid var(--more-text-color);
-    padding-top: 3%;
-}
-
-.buttons_Form--addStaffModal>div>button {
-    width: 45%;
-    height: 35px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: large;
-}
-
-.buttons_Form--addStaffModal>div>button:nth-child(1) {
-    background: none;
-    border: 1px solid #8c8c8c;
-}
-
-.buttons_Form--addStaffModal>div>button:nth-child(1):hover {
-    background-color: var(--more-color);
-}
-
-.buttons_Form--addStaffModal>div>button:nth-child(2) {
-    background-color: var(--button);
-    color: white;
-}
-
-.buttons_Form--addStaffModal>div>button:nth-child(2):hover {
-    background-color: var(--botton-hover);
-}
-
-
 /* Floor Plan */
 .floor_Plan--section {
     padding: 5%;
@@ -485,12 +278,11 @@ body {
     height: 81%;
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: repeat(2 , 1fr);
     gap: 10px;
 }
 
 .floor_Plan--section>div:nth-child(2)>div {
-    background-color: #FBF8F8;
+    background-color: #EFFEFA;
     border: 2px solid #FFC9C9;
     border-radius: 20px;
     padding: 3%;

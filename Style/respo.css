@@ -21,4 +21,54 @@
         height: 100%;
         gap: 15px;
     }
+
+    .header_search--partie {
+        gap: 5px;
+        margin-left: 2%;
+        padding-top: 10px;
+    }
+
+    .header_search--partie>p {
+        font-size: small;
+    }
+
+    .search_search--partie>div {
+        gap: 2px;
+        padding: 3px;
+        width: 100%;
+    }
+
+    .search_search--partie>div>input {
+        width: 100%;
+    }
+
+    .staff_UNST--partie {
+        height: 82%;
+        overflow-y: auto;
+    }
+
+    .add_Staff_Button--partie {
+        height: 100%;
+    }
+
+    .add_Staff_Button--partie>button {
+        height: 25%;
+    }
+
+    .floor_Plan--section {
+        width: 100%;
+    }
+
+    .floor_Plan--section>div:nth-child(2) {
+        grid-template-columns: repeat(1 , 1fr);
+        width: 100%;
+    }
+
+    .floor_Plan--section>div:nth-child(2)>div {
+        width: 85%;
+    }
+
+    .add_Staff--Modal , .emploiyee_detail--Modal {
+        width: 95%;
+    }
 }

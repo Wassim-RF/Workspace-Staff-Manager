@@ -31,4 +31,9 @@ export function createEmploiyee(emploiyees , id , name , email , telephone , rol
     localStorage.setItem("emploiyees" , JSON.stringify(emploiyees));
 
     return 1;
+};
+
+export function deleteEmploiCard(event) {
+    const emploiyeeTargeted = addToRoomButton.closest(".delete_emploiyee--floor").querySelector(".emploiyee_card");
+    
 }
