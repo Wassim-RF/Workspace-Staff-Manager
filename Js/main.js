@@ -3,4 +3,3 @@ import {setupETOR} from './logic/manageRolesRoom.js';
 
 setupEvent();
 setupETOR();
-setupDragAndDrop();
