@@ -36,17 +36,21 @@ export function profilePictureDiv() {
     const emploiyeeProfileURL = document.getElementById("emploiyee_profile--URL");
     const pictureSvgProfileURL = document.getElementById("picture_svg--profileURL");
 
-    if (emploiyeeProfileURL.value) {
+    if (emploiyeeProfileURL.value != "") {
         pictureSvgProfileURL.style.display = "none";
+        // profilePictireDiv.innerHTML = `<img src="${emploiyeeProfileURL.value}">`;
         if (profilePictireDiv) {
             profilePictireDiv.style.backgroundImage = `url('${emploiyeeProfileURL.value}')`;
+            profilePictireDiv.style.backgroundSize = 'cover';
+            profilePictireDiv.style.backgroundPosition = 'center';
+            profilePictireDiv.style.backgroundRepeat = 'no-repeat';
         } else {
             console.log("Se div n'existe pas");
             console.log(profilePictireDiv);
-            
         }
     } else {
         pictureSvgProfileURL.style.display = "block";
+        profilePictireDiv.style.backgroundImage = `none`;
     }
 }
 
