@@ -72,3 +72,10 @@
         width: 95%;
     }
 }
+
+/* Tablet */
+@media (min-width: 769px ) , ( max-width: 1023px) {
+    .add_Staff--Modal , .emploiyee_detail--Modal {
+        width: 50%;
+    }
+}

@@ -38,7 +38,6 @@ export function profilePictureDiv() {
 
     if (emploiyeeProfileURL.value != "") {
         pictureSvgProfileURL.style.display = "none";
-        // profilePictireDiv.innerHTML = `<img src="${emploiyeeProfileURL.value}">`;
         if (profilePictireDiv) {
             profilePictireDiv.style.backgroundImage = `url('${emploiyeeProfileURL.value}')`;
             profilePictireDiv.style.backgroundSize = 'cover';

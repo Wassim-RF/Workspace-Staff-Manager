@@ -1,7 +1,7 @@
 import {setupEvent} from './event.js';
 import {setupETOR} from './logic/manageRolesRoom.js';
-import {setupETORDragDrop} from './logic/dragAndDrop.js'
+import {setupDragAndDrop} from './logic/dragAndDrop.js';
 
 setupEvent();
 setupETOR();
-setupETORDragDrop();
+setupDragAndDrop();
